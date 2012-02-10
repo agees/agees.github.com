@@ -4,7 +4,7 @@
   <title><![CDATA[agees.github.com]]></title>
   <link href="http://agees.github.com/atom.xml" rel="self"/>
   <link href="http://agees.github.com/"/>
-  <updated>2012-02-10T10:40:33+09:00</updated>
+  <updated>2012-02-10T10:42:45+09:00</updated>
   <id>http://agees.github.com/</id>
   <author>
     <name><![CDATA[agee members]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[first post]]></title>
+    <title type="html"><![CDATA[first postあ]]></title>
     <link href="http://agees.github.com/blog/2012/02/09/first-post/"/>
     <updated>2012-02-09T22:43:00+09:00</updated>
     <id>http://agees.github.com/blog/2012/02/09/first-post</id>
-    <content type="html"><![CDATA[<p>最初の記事</p>
+    <content type="html"><![CDATA[<p>最初の記事あ</p>
 ]]></content>
   </entry>
   
