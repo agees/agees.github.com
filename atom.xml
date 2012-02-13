@@ -4,7 +4,7 @@
   <title><![CDATA[agees.github.com]]></title>
   <link href="http://agees.github.com/atom.xml" rel="self"/>
   <link href="http://agees.github.com/"/>
-  <updated>2012-02-10T20:44:31+09:00</updated>
+  <updated>2012-02-13T16:04:43+09:00</updated>
   <id>http://agees.github.com/</id>
   <author>
     <name><![CDATA[agee members]]></name>
@@ -18,9 +18,8 @@
     <link href="http://agees.github.com/blog/2012/02/09/first-post/"/>
     <updated>2012-02-09T22:43:00+09:00</updated>
     <id>http://agees.github.com/blog/2012/02/09/first-post</id>
-    <content type="html"><![CDATA[<h1>Railsやってみよう</h1>
-
-<p>なにはともあれRailsやってみよう</p>
+    <content type="html"><![CDATA[<p>なにはともあれRailsやってみよう<br/>
+  <!-- more --></p>
 
 <h2>今日やること</h2>
 
@@ -33,10 +32,10 @@
 
 <h2>環境設定</h2>
 
-<ul>
-<li><p>Install vim<br/>
+<ol>
+<li>Install vim<br/>
 <a href="http://www.kaoriya.net/software/vim" title="vimダウンロード"><code>vim</code></a><br/>
-vimをダウンロードしてインストールする。</p></li>
+vimをダウンロードしてインストールする。</li>
 <li><p>コマンドライン環境を作る<br/>
 windowsにlinuxライクな使いやすいコマンドライン環境を作る。</p>
 
@@ -46,24 +45,26 @@ windowsにlinuxライクな使いやすいコマンドライン環境を作る�
 <a href="http://sourceforge.net/projects/console/" title="Console2"><code>Console2</code></a><br/>
 <a href="http://www.nyaos.org/index.cgi?p=DOWNLOAD_2xx" title="nyaos"><code>nyaos</code></a><br/>
 Console2を開い<br/>
-  <code>Edit-&gt;Settings-&gt;Tab-&gt;Shell</code><br/>
+<code>Edit-&gt;Settings-&gt;Tab-&gt;Shell</code><br/>
 にnyaos.exeのパスを指定すればOK。</li>
 <li><a href="http://www.vim.org/scripts/script.php?script_id=1658" title="nerdtree">nerdtree</a><br/>
 その後にnerdtreeをインストする。<br/>
 nerdtreeとはコンソールから使えるエクスプローラのようなvim拡張。便利。<br/>
 <a href="http://www.vim.org/scripts/download_script.php?src_id=17123" title="nerdtree download"><code>nerdtree</code></a><br/>
-落としたzipを解凍/vim/vimfilesに配置する。</li>
+落としたzipを解凍/vim/vimfilesに配置。</li>
 </ul>
 </li>
-<li><p>githubアカウントの作成
-ソース管理にはgithubを使う。Railsのインストール時にアカウントが必要に<br/>
-なるので以下でアカウントを作っておく。<br/>
-<a href="https://github.com/" title="github"><code>github</code></a></p></li>
+<li><p>githubアカウントの<br/>
+ ソース管理にはgithubを使う。Railsのインストール時にアカウントが必要に<br/>
+ なるので以下でアカウントを作っておく。<br/>
+ <a href="https://github.com/" title="github"><code>github</code></a></p></li>
 <li><p>Install Rails<br/>
 Railsをインストールする。<br/>
 <a href="http://railsinstaller.org/" title="RailsInstaller"><code>RailsInstaller</code></a><br/>
+この動画の通りなんだけども
+<a href="http://vimeo.com/34078037"><img src="http://railsinstaller.org/images/video-thumbnail.png" alt="RailsInstaller" /></a><br/>
 インストール後にgithubアカウントを登録する。</p></li>
-</ul>
+</ol>
 
 
 <h2>Railsを動かしてみる</h2>
@@ -83,6 +84,101 @@ Rails 3.1.1
 
 <pre><code>$ rails s
 </code></pre>
+
+<p>・ｱ・ｱ<a href="http://localhost:3000"><code>localhost:3000</code></a>みると
+  こんなのが出る。
+  <img src="http://agees.github.com/images/scshot1.png" alt="firstpage" />
+  動いたねと。</p>
+
+<h2>githubにソースをアップしてみる</h2>
+
+<ol>
+<li><p>リポジトリを作る。</p>
+
+<p>以下で<code>ProjectName</code>を入力して<code>Create Repository</code>する</p>
+
+<p><img src="http://agees.github.com/images/newrepo.png" alt="newrepo" /></p>
+
+<p>すると手順のページが出るので、<code>$git init</code>以下をやる。</p>
+
+<p><img src="http://agees.github.com/images/newrepo_todo.png" alt="newrepo_todo" /></p></li>
+<li><p>first pushまで</p>
+
+<p> git init</p>
+
+<pre><code> $ git init  
+</code></pre>
+
+ git add
+
+<pre><code> $ git add .  
+</code></pre>
+
+ git commit
+
+<pre><code> $ git commit -m 'first commit'  
+</code></pre>
+
+ git remote
+
+<pre><code> $ git remote add origin git@github.com:username/ProjectName.git  
+</code></pre>
+
+ git push
+
+<pre><code> $ git push -u origin master  
+</code></pre></li>
+<li><p>見てみる</p>
+
+<p> <code>github</code>の<code>YourRepositories</code>にさっき<code>git push</code>したプロジェクトが表示されていて、<br/>
+ 中身が以下のようになっていればOK</p>
+
+<p> <img src="http://agees.github.com/images/helloagees.png" alt="helloagees" /></p></li>
+</ol>
+
+
+<h2>DB連携のwebアプリをさらっと（余裕があれば）</h2>
+
+<ol>
+<li><p>scaffold</p>
+
+<p>scaffoldを実行してみる。
+以下のコマンドをたたSQLITE（他DBに変更可能）上に
+tableとかcolumnを作成してくれて、しかも
+マスタメンテ的ページまで作成してくれる。</p>
+
+<ul>
+<li><p>scaffold<br/>
+これをやると自動的にcontrollerとviewとmodel(dbアクセサ)まで勝手に<br/>
+ $ rails g scaffold item code:string name:string description:text canceled:boolean</p></li>
+<li><p>migrate<br/>
+これやるとmodelを元にdbにtableを作成してくれたり、修正<br/>
+ $ rake db;migrate</p></li>
+</ul>
+
+
+<p>※補足：間違ったら<br/>
+<code>db/migrate/20120101~create_items.rb</code><br/>
+みたいのができているので、<br/>
+それを直してもう一回<code>rake db:migrate</code>すればOK</p></li>
+<li><p>見てみる</p>
+
+<pre><code>$ rails s  
+</code></pre>
+
+<p>して、<code>http://localhost:3000/items</code>をみるとこんなのが</p>
+
+<p><img src="http://agees.github.com/images/itemsfirst.png" alt="itemsfirst" /></p>
+
+<p><code>New Item</code>するとこんな感じ</p>
+
+<p><img src="http://agees.github.com/images/newitemadd.png" alt="newitemadd" /></p>
+
+<p><code>Create Item</code>して<code>Back</code>するとこんな感じでデータができている。</p>
+
+<p><img src="http://agees.github.com/images/newitemed.png" alt="newitemed" /></p></li>
+</ol>
+
 ]]></content>
   </entry>
   
