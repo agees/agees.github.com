@@ -4,7 +4,7 @@
   <title><![CDATA[agees.github.com]]></title>
   <link href="http://agees.github.com/atom.xml" rel="self"/>
   <link href="http://agees.github.com/"/>
-  <updated>2012-02-13T16:04:43+09:00</updated>
+  <updated>2012-02-15T15:34:43+09:00</updated>
   <id>http://agees.github.com/</id>
   <author>
     <name><![CDATA[agee members]]></name>
@@ -47,11 +47,19 @@ windowsにlinuxライクな使いやすいコマンドライン環境を作る�
 Console2を開い<br/>
 <code>Edit-&gt;Settings-&gt;Tab-&gt;Shell</code><br/>
 にnyaos.exeのパスを指定すればOK。</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=1658" title="nerdtree">nerdtree</a><br/>
+<li><p><a href="http://www.vim.org/scripts/script.php?script_id=1658" title="nerdtree">nerdtree</a><br/>
 その後にnerdtreeをインストする。<br/>
 nerdtreeとはコンソールから使えるエクスプローラのようなvim拡張。便利。<br/>
 <a href="http://www.vim.org/scripts/download_script.php?src_id=17123" title="nerdtree download"><code>nerdtree</code></a><br/>
-落としたzipを解凍/vim/vimfilesに配置。</li>
+落としたzipを解凍/vim/vimfilesに配置。<br/>
+で、以下を<code>vimrc</code>に追記。</p>
+
+<pre><code>" 引数なしならNERDTree実行、ありならフツーにvim
+let file_name = expand("%")
+if has('vim_starting') &amp;&amp;  file_name == ""
+    autocmd VimEnter * NERDTree ./
+endif
+</code></pre></li>
 </ul>
 </li>
 <li><p>githubアカウントの<br/>
