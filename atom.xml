@@ -4,7 +4,7 @@
   <title><![CDATA[agees.github.com]]></title>
   <link href="http://agees.github.com/atom.xml" rel="self"/>
   <link href="http://agees.github.com/"/>
-  <updated>2012-02-15T15:34:43+09:00</updated>
+  <updated>2012-02-15T15:41:16+09:00</updated>
   <id>http://agees.github.com/</id>
   <author>
     <name><![CDATA[agee members]]></name>
@@ -59,7 +59,9 @@ let file_name = expand("%")
 if has('vim_starting') &amp;&amp;  file_name == ""
     autocmd VimEnter * NERDTree ./
 endif
-</code></pre></li>
+</code></pre>
+
+<p>vim.exeにパスを通すのもやっておく。</p></li>
 </ul>
 </li>
 <li><p>githubアカウントの<br/>
