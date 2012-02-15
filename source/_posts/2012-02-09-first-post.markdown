@@ -113,12 +113,14 @@ DB連携のwebアプリをさらっと（余裕があれば）
     マスタメンテ的ページまで作成してくれる。
 
     +  scaffold  
-    これをやると自動的にcontrollerとviewとmodel(dbアクセサ)まで勝手に  
-        $ rails g scaffold item code:string name:string description:text canceled:boolean  
+    これをやると自動的にcontrollerとview(ページテンプレ)とmodel(dbアクセサ)まで勝手に作ってくれる。  
+
+            $ rails g scaffold item code:string name:string description:text canceled:boolean  
     
     +  migrate  
-    これやるとmodelを元にdbにtableを作成してくれたり、修正  
-        $ rake db;migrate  
+    これやるとmodelを元にdbにtableを作成してくれたり、修正できたりする。  
+
+            $ rake db;migrate  
 
     ※補足：間違ったら  
     `db/migrate/20120101~create_items.rb`  
