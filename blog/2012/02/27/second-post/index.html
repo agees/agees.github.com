@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>カッコイイページ作る - agees.github.com</title>
+  <meta name="author" content="agee members">
+
+  
+  <meta name="description" content="jqueryのライブラリとbootstrapでカッコイイページ作る 今日やること おさらい
+カッコイイページを見て見る
+bootstrapって何？
+mooflowを組み込む
+chromeのデバッガを触って見る おさらい 軽くおさらい 前回 カッコイイページ 俺のとこで、、、。 （ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://agees.github.com/blog/2012/02/27/second-post">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="agees.github.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">agees.github.com</a></h1>
+  
+    <h2>agees activities.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:agees.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">カッコイイページ作る</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-27T19:23:00+09:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>jqueryのライブラリとbootstrapでカッコイイページ作る
+  <!-- more --></p>
+
+<h2>今日やること</h2>
+
+<ul>
+<li>おさらい</li>
+<li>カッコイイページを見て見る</li>
+<li>bootstrapって何？</li>
+<li>mooflowを組み込む</li>
+<li>chromeのデバッガを触って見る</li>
+</ul>
+
+
+<h2>おさらい  </h2>
+
+<p>  軽くおさらい<br/>
+  <a href="http://agees.github.com/blog/2012/02/09/first-post/" title="previous"><code>前回</code></a></p>
+
+<h2>カッコイイページ  </h2>
+
+<p>  俺のとこで、、、。<br/>
+  （herokuうまくいかなかった、、、。）</p>
+
+<h2>Bootstrap  </h2>
+
+<ol>
+<li>BootStrapとは？<br/>
+Twitterが公開しているcssライブラリ。<br/>
+sassというcss拡張を使っている。<br/>
+<a href="http://twitter.github.com/bootstrap/" title="BootStrap"><code>BootStrap</code></a><br/>
+ダウンロードして<a href="http://twitter.github.com/bootstrap/examples.html"><code>Example</code></a>のソース参照のマネすればそれなりの<br/>
+見た目に仕上がる。</li>
+</ol>
+
+
+<h2>MooFlow  </h2>
+
+<p>  JavaScriptのライブラリ。<br/>
+  詳細に言うと、jqueryをラップしたmootoolsというライブラリを使って<br/>
+  作ったipodのCoverFlow的表示ライブラリ。<br/>
+  <a href="http://www.outcut.de/MooFlow/" title="MooFlow"><code>MooFlow</code></a><br/>
+  <a href="http://mootools.net/" title="mootools"><code>mootools</code></a></p>
+
+<p>  ※蛇足だけど、この組み込みにハマった、、、<br/>
+  + mootoolsの最新バージョンだと動かないという、、、<br/>
+  + javascriptの宣言順が違うとクラスや関数が認識されない、、、</p>
+
+<p>  で、以下が非常に役に立ったのでご紹介。</p>
+
+<h2>Chromeデバッガ  </h2>
+
+<ul>
+<li><p>Chromeインストール<br/>
+まずはChrome入ってなかったらインスコ。<br/>
+<a href="http://www.google.co.jp/chrome/intl/ja/landing_ch.html" title="Chrome Download"><code>Chrome</code></a></p></li>
+<li><p>デバッガを開く<br/>
+ここの↓<br/>
+<img src="/images/chrome1.png" alt="chrome1" /></p>
+
+<p><code>ツール→デベロッパーツール</code></p>
+
+<p>で、こんなのが開く<br/>
+<img src="/images/chrome2.png" alt="chrome2" /></p>
+
+<p>できる事。知ってる限り。</p>
+
+<ul>
+<li>HTMLのソースと見た目の判別、サイズとかの認識</li>
+<li>JavaScriptの即時デバッグ<br/>
+これのおかげで「javascriptの宣言順のせいだ」とわかった。</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>結論  </h2>
+
+<p>  見ての通り。<br/>
+  DBと連携したり、MooFlowを改造したり（縦にするとか）すれば<br/>
+  いろいろできるんじゃないかと。デザインをもうちょっと好みに<br/>
+  するとか。</p>
+
+<h2>次回  </h2>
+
+<ul>
+<li>herokuにアップしたい。</li>
+<li>facebookアプリ作りたい。</li>
+<li>gitをグループにしたい。</li>
+<li>Googleグループ作りたい。</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">agee members</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-27T19:23:00+09:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://agees.github.com/blog/2012/02/27/second-post/" data-via="" data-counturl="http://agees.github.com/blog/2012/02/27/second-post/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/09/first-post/" title="Previous Post: 1st : start up!">&laquo; 1st : start up!</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/02/27/second-post/">カッコイイページ作る</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/09/first-post/">1st : start up!</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - agee members -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

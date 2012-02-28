@@ -4,7 +4,7 @@
   <title><![CDATA[agees.github.com]]></title>
   <link href="http://agees.github.com/atom.xml" rel="self"/>
   <link href="http://agees.github.com/"/>
-  <updated>2012-02-15T15:43:02+09:00</updated>
+  <updated>2012-02-28T13:48:21+09:00</updated>
   <id>http://agees.github.com/</id>
   <author>
     <name><![CDATA[agee members]]></name>
@@ -12,6 +12,106 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[カッコイイページ作る]]></title>
+    <link href="http://agees.github.com/blog/2012/02/27/second-post/"/>
+    <updated>2012-02-27T19:23:00+09:00</updated>
+    <id>http://agees.github.com/blog/2012/02/27/second-post</id>
+    <content type="html"><![CDATA[<p>jqueryのライブラリとbootstrapでカッコイイページ作る
+  <!-- more --></p>
+
+<h2>今日やること</h2>
+
+<ul>
+<li>おさらい</li>
+<li>カッコイイページを見て見る</li>
+<li>bootstrapって何？</li>
+<li>mooflowを組み込む</li>
+<li>chromeのデバッガを触って見る</li>
+</ul>
+
+
+<h2>おさらい  </h2>
+
+<p>  軽くおさらい<br/>
+  <a href="http://agees.github.com/blog/2012/02/09/first-post/" title="previous"><code>前回</code></a></p>
+
+<h2>カッコイイページ  </h2>
+
+<p>  俺のとこで、、、。<br/>
+  （herokuうまくいかなかった、、、。）</p>
+
+<h2>Bootstrap  </h2>
+
+<ol>
+<li>BootStrapとは？<br/>
+Twitterが公開しているcssライブラリ。<br/>
+sassというcss拡張を使っている。<br/>
+<a href="http://twitter.github.com/bootstrap/" title="BootStrap"><code>BootStrap</code></a><br/>
+ダウンロードして<a href="http://twitter.github.com/bootstrap/examples.html"><code>Example</code></a>のソース参照のマネすればそれなりの<br/>
+見た目に仕上がる。</li>
+</ol>
+
+
+<h2>MooFlow  </h2>
+
+<p>  JavaScriptのライブラリ。<br/>
+  詳細に言うと、jqueryをラップしたmootoolsというライブラリを使って<br/>
+  作ったipodのCoverFlow的表示ライブラリ。<br/>
+  <a href="http://www.outcut.de/MooFlow/" title="MooFlow"><code>MooFlow</code></a><br/>
+  <a href="http://mootools.net/" title="mootools"><code>mootools</code></a></p>
+
+<p>  ※蛇足だけど、この組み込みにハマった、、、<br/>
+  + mootoolsの最新バージョンだと動かないという、、、<br/>
+  + javascriptの宣言順が違うとクラスや関数が認識されない、、、</p>
+
+<p>  で、以下が非常に役に立ったのでご紹介。</p>
+
+<h2>Chromeデバッガ  </h2>
+
+<ul>
+<li><p>Chromeインストール<br/>
+まずはChrome入ってなかったらインスコ。<br/>
+<a href="http://www.google.co.jp/chrome/intl/ja/landing_ch.html" title="Chrome Download"><code>Chrome</code></a></p></li>
+<li><p>デバッガを開く<br/>
+ここの↓<br/>
+<img src="http://agees.github.com/images/chrome1.png" alt="chrome1" /></p>
+
+<p><code>ツール→デベロッパーツール</code></p>
+
+<p>で、こんなのが開く<br/>
+<img src="http://agees.github.com/images/chrome2.png" alt="chrome2" /></p>
+
+<p>できる事。知ってる限り。</p>
+
+<ul>
+<li>HTMLのソースと見た目の判別、サイズとかの認識</li>
+<li>JavaScriptの即時デバッグ<br/>
+これのおかげで「javascriptの宣言順のせいだ」とわかった。</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>結論  </h2>
+
+<p>  見ての通り。<br/>
+  DBと連携したり、MooFlowを改造したり（縦にするとか）すれば<br/>
+  いろいろできるんじゃないかと。デザインをもうちょっと好みに<br/>
+  するとか。</p>
+
+<h2>次回  </h2>
+
+<ul>
+<li>herokuにアップしたい。</li>
+<li>facebookアプリ作りたい。</li>
+<li>gitをグループにしたい。</li>
+<li>Googleグループ作りたい。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[1st : start up!]]></title>
