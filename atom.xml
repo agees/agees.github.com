@@ -4,7 +4,7 @@
   <title><![CDATA[agees.github.com]]></title>
   <link href="http://agees.github.com/atom.xml" rel="self"/>
   <link href="http://agees.github.com/"/>
-  <updated>2012-02-28T13:48:21+09:00</updated>
+  <updated>2012-03-06T22:15:11+09:00</updated>
   <id>http://agees.github.com/</id>
   <author>
     <name><![CDATA[agee members]]></name>
@@ -12,6 +12,186 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[herokuにアップ]]></title>
+    <link href="http://agees.github.com/blog/2012/03/06/3rd-post/"/>
+    <updated>2012-03-06T20:38:00+09:00</updated>
+    <id>http://agees.github.com/blog/2012/03/06/3rd-post</id>
+    <content type="html"><![CDATA[<p>こないだのページをherokuにアップしてみる
+  <!-- more --></p>
+
+<h2>今日やること</h2>
+
+<ul>
+<li>おさらい</li>
+<li>herokuって何？</li>
+<li>PaaSって何？</li>
+<li>herokuにアップ</li>
+</ul>
+
+
+<h2>おさらい  </h2>
+
+<p>  軽くおさらい<br/>
+  <a href="http://agees.github.com/blog/2012/02/27/second-post/" title="previous"><code>前回</code></a></p>
+
+<h2>herokuって何？  </h2>
+
+<p>こんな感じ。<br/>
+<a href="http://thinkit.co.jp/story/2011/03/23/2060" title="heroku toha?">「herokuとは？」</a><br/>
+<a href="http://www.heroku.com/" title="heroku">heroku</a></p>
+
+<ul>
+<li>PaaSである</li>
+<li>使用可能フレームワーク
+
+<ol>
+<li>RubyOnRails</li>
+<li>PlayFramework</li>
+<li>Scala</li>
+<li>Python</li>
+<li>Java or Spring</li>
+<li>Node.js</li>
+<li>Clojure</li>
+<li>Django</li>
+<li>Facebook</li>
+</ol>
+</li>
+<li>DB=PostgreSQL</li>
+<li>DBが5MBまでタダ</li>
+<li>1プロセスの占有ならタダ</li>
+<li>メモリは300MBまでならタダ</li>
+<li>Gitが必要</li>
+<li>Rubyが必要</li>
+</ul>
+
+
+<h2>PaaSって何？    </h2>
+
+<p>こんな感じ<br/>
++ <a href="http://ja.wikipedia.org/wiki/PaaS" title="PaaS Toha?)  
+SaaSの一種らしい。  
+WindowsAzureもその一種らしい。  
+[WindowsAzure](http://www.microsoft.com/japan/windowsazure/campaign/ &quot;Azure">「PaaSとは？」</a><br/>
+5000アプリか。herokuは105000アプリだそうだけど。<br/>
+他はGoogleAppEngine、AmazonWebServicesなどなど。<br/>
++ <a href="http://ja.wikipedia.org/wiki/SaaS" title="SaaS Toha?)  
++ [SalesForce.com](http://www.salesforce.com/jp/ &quot;SalesForce">「SaaSとは？」</a><br/>
+日本の業務系アプリ業界（富士通、NEC、日立、東芝、三菱など）<br/>
+がこういうのに仕事食われてるのでは？<br/>
++ <a href="http://ja.wikipedia.org/wiki/IaaS" title="IaaS">そもそもクラウドとは？</a><br/>
+IaaSの代表はAmazonEC2。webサービスの多くがここを使っている。<br/>
+ソーシャルゲームとか。twitterもここ。</p>
+
+<h2>herokuにアップ  </h2>
+
+<p>ともあれherokuにアップしてみよう。</p>
+
+<ol>
+<li>herokuアカウント作成</li>
+</ol>
+
+
+<p><a href="http://www.heroku.com/" title="heroku">heroku</a><br/>
+で<code>Sign Up</code>！</p>
+
+<ol>
+<li>herokuツールをインストール</li>
+</ol>
+
+
+<p>インスト。</p>
+
+<pre><code>$ gem install heroku  
+</code></pre>
+
+<ol>
+<li>herokuリポジトリを作る</li>
+</ol>
+
+
+<p>アップしたいrailsアプリフォルダに移動して、</p>
+
+<pre><code>$ heroku create  
+</code></pre>
+
+<p>Emailとパスワードを聞かれる。登録するssh-keyも聞かれるかも。</p>
+
+<ol>
+<li>herokuにアップ</li>
+</ol>
+
+
+<p>以下でherokuにアップ。</p>
+
+<pre><code>$ git push heroku master  
+</code></pre>
+
+<p>すると、GemFilesに基づいて必要なgemなどもインストされる。<br/>
+db今回使っていないが、以下も必要かもしれない</p>
+
+<pre><code>$ heroku rake db:setup  
+</code></pre>
+
+<p>、、、にしても、この後ハマった、、、</p>
+
+<ul>
+<li>youtube_itがherokuリポジトリにインストされない</li>
+</ul>
+
+
+<p>なんかエラーページなので、ログを見てみたら、</p>
+
+<pre><code>$ heroku logs  
+</code></pre>
+
+<p>youtube_itがインストールされていないっぽい。<br/>
+いろいろ調べたりtry&amp;errorしてみたら、<br/>
+GemFiles内の記述位置が悪いことが分かった。<br/>
+Gemfilesの&#8221;group :test do&#8221;より前に<br/>
+gem &#8216;youtube_it&#8217;<br/>
+を書かないとインストされない。</p>
+
+<ul>
+<li>postgresのgemをインストする必要あり</li>
+</ul>
+
+
+<p>まだエラーページなので、またログ見てみたら、<br/>
+&#8220;pg&#8221;がないと。ここにも書いてあった。<br/>
+<a href="http://devcenter.heroku.com/articles/rails3" title="Dev1">Heroku Dev Center</a><br/>
+GemFilesに以下を追加。</p>
+
+<pre><code>gem 'pg'  
+</code></pre>
+
+<ul>
+<li>Asset Pipeline対応が必要</li>
+</ul>
+
+
+<p>MooFlow(CoverFlowみたいなやつ)が動かないので、<br/>
+こないだのchromeのデバッガで見てみたら、<br/>
+どうやらjavascriptファイルが全然足りてない様子。<br/>
+また<code>HerokuDevCenter</code>を見てみたら、こんなのが載っていた。<br/>
+<a href="http://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar" title="Asset">Rails3対応</a><br/>
+ここのCompiling Asset Localyをやってdeployし直したら動いた。</p>
+
+<h2>次回  </h2>
+
+<p>何しよう？</p>
+
+<ul>
+<li>ガッツリRails</li>
+<li>Facebookアプリ</li>
+<li>他言語触る</li>
+</ul>
+
+
+<p>など。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[カッコイイページ作る]]></title>

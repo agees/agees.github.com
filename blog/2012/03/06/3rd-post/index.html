@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>herokuにアップ - agees.github.com</title>
+  <meta name="author" content="agee members">
+
+  
+  <meta name="description" content="こないだのページをherokuにアップしてみる 今日やること おさらい
+herokuって何？
+PaaSって何？
+herokuにアップ おさらい 軽くおさらい 前回 herokuって何？ こんな感じ。
+「herokuとは？」
+heroku PaaSである
+使用可能フレームワーク &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://agees.github.com/blog/2012/03/06/3rd-post">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="agees.github.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">agees.github.com</a></h1>
+  
+    <h2>agees activities.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:agees.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Herokuにアップ</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T20:38:00+09:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>こないだのページをherokuにアップしてみる
+  <!-- more --></p>
+
+<h2>今日やること</h2>
+
+<ul>
+<li>おさらい</li>
+<li>herokuって何？</li>
+<li>PaaSって何？</li>
+<li>herokuにアップ</li>
+</ul>
+
+
+<h2>おさらい  </h2>
+
+<p>  軽くおさらい<br/>
+  <a href="http://agees.github.com/blog/2012/02/27/second-post/" title="previous"><code>前回</code></a></p>
+
+<h2>herokuって何？  </h2>
+
+<p>こんな感じ。<br/>
+<a href="http://thinkit.co.jp/story/2011/03/23/2060" title="heroku toha?">「herokuとは？」</a><br/>
+<a href="http://www.heroku.com/" title="heroku">heroku</a></p>
+
+<ul>
+<li>PaaSである</li>
+<li>使用可能フレームワーク
+
+<ol>
+<li>RubyOnRails</li>
+<li>PlayFramework</li>
+<li>Scala</li>
+<li>Python</li>
+<li>Java or Spring</li>
+<li>Node.js</li>
+<li>Clojure</li>
+<li>Django</li>
+<li>Facebook</li>
+</ol>
+</li>
+<li>DB=PostgreSQL</li>
+<li>DBが5MBまでタダ</li>
+<li>1プロセスの占有ならタダ</li>
+<li>メモリは300MBまでならタダ</li>
+<li>Gitが必要</li>
+<li>Rubyが必要</li>
+</ul>
+
+
+<h2>PaaSって何？    </h2>
+
+<p>こんな感じ<br/>
++ <a href="http://ja.wikipedia.org/wiki/PaaS" title="PaaS Toha?)  
+SaaSの一種らしい。  
+WindowsAzureもその一種らしい。  
+[WindowsAzure](http://www.microsoft.com/japan/windowsazure/campaign/ &quot;Azure">「PaaSとは？」</a><br/>
+5000アプリか。herokuは105000アプリだそうだけど。<br/>
+他はGoogleAppEngine、AmazonWebServicesなどなど。<br/>
++ <a href="http://ja.wikipedia.org/wiki/SaaS" title="SaaS Toha?)  
++ [SalesForce.com](http://www.salesforce.com/jp/ &quot;SalesForce">「SaaSとは？」</a><br/>
+日本の業務系アプリ業界（富士通、NEC、日立、東芝、三菱など）<br/>
+がこういうのに仕事食われてるのでは？<br/>
++ <a href="http://ja.wikipedia.org/wiki/IaaS" title="IaaS">そもそもクラウドとは？</a><br/>
+IaaSの代表はAmazonEC2。webサービスの多くがここを使っている。<br/>
+ソーシャルゲームとか。twitterもここ。</p>
+
+<h2>herokuにアップ  </h2>
+
+<p>ともあれherokuにアップしてみよう。</p>
+
+<ol>
+<li>herokuアカウント作成</li>
+</ol>
+
+
+<p><a href="http://www.heroku.com/" title="heroku">heroku</a><br/>
+で<code>Sign Up</code>！</p>
+
+<ol>
+<li>herokuツールをインストール</li>
+</ol>
+
+
+<p>インスト。</p>
+
+<pre><code>$ gem install heroku  
+</code></pre>
+
+<ol>
+<li>herokuリポジトリを作る</li>
+</ol>
+
+
+<p>アップしたいrailsアプリフォルダに移動して、</p>
+
+<pre><code>$ heroku create  
+</code></pre>
+
+<p>Emailとパスワードを聞かれる。登録するssh-keyも聞かれるかも。</p>
+
+<ol>
+<li>herokuにアップ</li>
+</ol>
+
+
+<p>以下でherokuにアップ。</p>
+
+<pre><code>$ git push heroku master  
+</code></pre>
+
+<p>すると、GemFilesに基づいて必要なgemなどもインストされる。<br/>
+db今回使っていないが、以下も必要かもしれない</p>
+
+<pre><code>$ heroku rake db:setup  
+</code></pre>
+
+<p>、、、にしても、この後ハマった、、、</p>
+
+<ul>
+<li>youtube_itがherokuリポジトリにインストされない</li>
+</ul>
+
+
+<p>なんかエラーページなので、ログを見てみたら、</p>
+
+<pre><code>$ heroku logs  
+</code></pre>
+
+<p>youtube_itがインストールされていないっぽい。<br/>
+いろいろ調べたりtry&amp;errorしてみたら、<br/>
+GemFiles内の記述位置が悪いことが分かった。<br/>
+Gemfilesの&#8221;group :test do&#8221;より前に<br/>
+gem &#8216;youtube_it&#8217;<br/>
+を書かないとインストされない。</p>
+
+<ul>
+<li>postgresのgemをインストする必要あり</li>
+</ul>
+
+
+<p>まだエラーページなので、またログ見てみたら、<br/>
+&#8220;pg&#8221;がないと。ここにも書いてあった。<br/>
+<a href="http://devcenter.heroku.com/articles/rails3" title="Dev1">Heroku Dev Center</a><br/>
+GemFilesに以下を追加。</p>
+
+<pre><code>gem 'pg'  
+</code></pre>
+
+<ul>
+<li>Asset Pipeline対応が必要</li>
+</ul>
+
+
+<p>MooFlow(CoverFlowみたいなやつ)が動かないので、<br/>
+こないだのchromeのデバッガで見てみたら、<br/>
+どうやらjavascriptファイルが全然足りてない様子。<br/>
+また<code>HerokuDevCenter</code>を見てみたら、こんなのが載っていた。<br/>
+<a href="http://devcenter.heroku.com/articles/rails3x-asset-pipeline-cedar" title="Asset">Rails3対応</a><br/>
+ここのCompiling Asset Localyをやってdeployし直したら動いた。</p>
+
+<h2>次回  </h2>
+
+<p>何しよう？</p>
+
+<ul>
+<li>ガッツリRails</li>
+<li>Facebookアプリ</li>
+<li>他言語触る</li>
+</ul>
+
+
+<p>など。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">agee members</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T20:38:00+09:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://agees.github.com/blog/2012/03/06/3rd-post/" data-via="" data-counturl="http://agees.github.com/blog/2012/03/06/3rd-post/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/27/second-post/" title="Previous Post: カッコイイページ作る">&laquo; カッコイイページ作る</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/06/3rd-post/">herokuにアップ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/27/second-post/">カッコイイページ作る</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/09/first-post/">1st : start up!</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - agee members -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
